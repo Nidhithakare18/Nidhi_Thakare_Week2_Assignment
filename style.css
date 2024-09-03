@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+    counter-reset: section;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #b74b4b;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #b74b4b;
+    color: black;
+    box-shadow: 0 0 25px #b74b4b;
+}
+.login{
+    width: 50%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.login h2{
+    text-align: center;
+    padding: 5px;
+}
+.login input{
+    display: block;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border: 1px solid black;
+    outline: none;
+    width: 100%;
+}
+.login button{
+    width: 100%;
+    padding: 5px 10px;
+    background-color: #161616;
+    color: white;
+    background-origin: 1px solid black;
+    text-align: center;
+    transition: 0.4s ease-in;
+    cursor: pointer;
+}
+.login button:hover{
+    background: transparent;
+    color: #161616;
+}
+.notifi{
+    background-color: green;
+    color: white;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 70px;
+}
+.main_content{
+    display: grid;
+    grid-template-columns: 30px 70px;
+    display: flex;
+}
+.main_content .post_form{
+    width: 300px;
+    margin: 100px auto;
+    box-shadow: rgba(red, green, blue, 0.16) 0px 1px 4px;
+    padding: 30px;
+}
+.main_content .post_form input, textarea{
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px 0;
+    margin: 20px 0;
+}
+.main_content .post_form button{
+    width: 100%;
+    background: #161616;
+    color: white;
+    padding: 5px 0;
+    border: 1px solid black;
+    transition: 0.5s ease-in-out;
+}
+.main_content .post_form button:hover{
+    background: transparent;
+}
+.update_btn{
+    display: none;
+}
+.my_blog{
+    display: none;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.my_content{
+    width: 80%;
+    padding: 150px 450px;
+}
+.my_content table{
+    width: 100%;
+    max-width: 50px auto;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    padding: 30px;
+}
+.my_content table tr{
+    width: 100%;
+    margin: 30px 0;
+}
+.my_content table tr button{
+    padding: 5px 10px;
+    border: 1px solid black;
+    transition: .5s ease-in;
+    color: white;
+    cursor: pointer;
+}
+.my_content table tr button.delete{
+    background: rgb(106, 8, 8);
+}
+.my_content table tr button.update{
+    background: rgb(8, 67, 106);
+}
+.my_content table tr button:hover{
+    background: transparent;
+    color: #161616;
+}
+
+.postNumber{
+   height: 20px;
+   width: 2cpx;
+   display: inline-block;
+}
+.postNumber::before{
+    counter-increment: section;
+    content: counter(section);
+}
+
+
+.main{
+    width: 70%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+.post{
+    margin: 20px 0;
+    box-shadow: rgba(253, 251, 251, 0.16) 0px 1px 4px;
+    padding: 20px;
+}
+.post h1{
+    padding: 10px 0;
+}
+footer{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border: 1px solid white;
+}

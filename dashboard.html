@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Blog Website</title>
+</head>
+
+<body>
+
+  <div class="login">
+    <form>
+        <h2>Blog Website</h2>
+        <input type="text" id="email" placeholder="Enter Email" autocomplete="off">
+        <input type="password" id="password" placeholder="Enter Password" autocomplete="off">
+        <button id="signin">login</button>
+    </form>
+</div>
+
+  <div class="my_blog">  
+    <header>
+        <a href="#" class="logo">BLOG Website</a>
+
+        <nav>
+            <a href="#" class="active"> Home</a>
+            <a href="#">Blog</a>
+            <a href="blog.html" id="logout">Logout</a>
+        </nav>
+    </header>
+
+    <div class="notifi"></div>
+      <div class="container_main">
+        <div class="main_content">
+
+          <div class="post_form">
+            <label>Title</label>
+            <input type="text" id="title" placeholder="Enter Title">
+            <label>Your Post</label>
+            <textarea id="post_content" class="" rows="10" cols="30"></textarea>
+            <button class="post_btn" id="post_btn">Post</button>
+            <button class="update_btn" id="update_btn">Update</button>
+          </div>
+
+          <div class="my_content">
+            <h2>My Posts</h2>
+            <table></table>
+          </div>
+        
+        </div>
+      </div>    
+        <footer>
+          <div class="footer_text">
+            <p>Copy Right Text Reserve </p>
+          </div>
+        </footer>
+  </div>
+
+  <script type="module" src="script.js"></script>
+  <script type="module" src="blog.js"></script>
+</body>
+</html>
